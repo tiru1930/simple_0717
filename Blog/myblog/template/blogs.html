@@ -1,0 +1,15 @@
+{% if myblog.count < 0 %}
+
+{% for blog in blogs %}
+
+    <p><a href="/blogs/get/{{ blog.id }}/">{{ blog.title }}</a></p>
+    <p>{{ article.body|lower|truncatewords:"10"}}</p>
+
+
+{% endfor %}
+
+{% else %}
+
+<p>None to show!</p>
+
+{% endif %}
